@@ -9,6 +9,10 @@ A python blockchain:
 - Wallet and transaction pool
 - Validation of blockchain, blocks and transactions
 
+
+Backend built in Python
+Frontend built in React JS
+
 # 2. Backend App & API
 
 **Run flask application and API**
@@ -19,6 +23,10 @@ python3 -m  backend.app
 ```
 export PEER=True && python3 -m  backend.app
 ```
+ **Seed the backend with data (added blocks)**
+```
+export SEED_DATA=True && python3 -m  backend.app
+```
 **Run tests**
 ```
 python3 -m pytest backend/tests
@@ -28,6 +36,19 @@ python3 -m pytest backend/tests
 
 #### Get - Current blockchain
 - http://localhost:5000/blockchain
+
+#### Get - Slice of current blockchain
+- http://localhost:5000/blockchain/range?
+- -> Example ?start=1&end=5
+
+#### Get - Length of current blockchain
+- http://localhost:5000/blockchain/length
+
+#### Get - Known Addresses
+- http://localhost:5000/known-addresses
+
+#### Get - Transactions pool
+- http://localhost:5000/transactions
 
 #### Post - Transaction
 - http://localhost:5000/wallet/transact
@@ -44,14 +65,21 @@ python3 -m pytest backend/tests
 #### Get - Wallet balance
 - http://localhost:5000/wallet/info
 
-------------------------------------------------------
+--------------------------------------------------
 # 3. Frontend
 
-To be added
-
+**Run frontend**
+```
+npm run start
+```
 
 -------------------------------------------
 # 5. NOTES TO SELF
 - Follow up on PubNub connection problems. "Exception in subscribe loop"
+- Improvements and roadmap:
+    - Sync without root node (!)
+    - Sync blockchain fallen behind (!!)
+    - Additional API endpoints e.g. difficulty
+    - etc.
     
  
