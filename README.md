@@ -10,7 +10,7 @@ A python blockchain:
 - Validation of blockchain, blocks and transactions
 
 
-Backend built in Python
+Backend built in Python.
 Frontend built in React JS
 
 # 2. Backend App & API
@@ -75,8 +75,8 @@ npm run start
 
 -------------------------------------------
 # 5. NOTES TO SELF
-- Follow up on PubNub connection problems. "Exception in subscribe loop"
-- Improvements and roadmap:
+
+- Improvements to consider:
     - Sync without root node (!)
     - Sync blockchain fallen behind (!!)
     - Additional API endpoints e.g. difficulty
